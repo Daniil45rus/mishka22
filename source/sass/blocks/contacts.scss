@@ -1,0 +1,48 @@
+.contacts {
+  padding: 38px 0;
+  text-align: center;
+}
+
+.contacts__title {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 28px;
+  color: #000000;
+}
+
+.contacts__list {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  margin-bottom: 62px;
+}
+
+.contacts__contact {
+  display: grid;
+  grid-template-columns: 78px 182px;
+
+  &:not(:nth-last-child(1)) {
+    margin-bottom: 50px;
+  }
+}
+
+.contacts__value {
+  &--mail {
+    border-bottom: 1px solid $second-color;
+  }
+}
+
+.contacts__map {
+  margin-bottom: 42px;
+}
+
+.contacts__write {
+  color: #444444;
+  font-size: 18px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 2px solid #444444;
+  padding: 16px 38px;
+  background-color: #ffffff;
+}
