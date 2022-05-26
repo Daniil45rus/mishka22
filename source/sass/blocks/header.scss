@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  min-width: 320px;
+  height: 80px;
+  position: relative;
+  align-items: center;
+}
+
+.header__logo {
+  display: block;
+  width: 86px;
+  height: 35px;
+  position: absolute;
+  right: calc(50% - 43px);
+  top: calc(50% - 17.5px);
+}
+
+.header__logotype {
+  display: block;
+
+  &--tab,
+  &--desk {
+    display: none;
+  }
+}
