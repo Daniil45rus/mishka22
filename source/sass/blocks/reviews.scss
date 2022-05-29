@@ -11,6 +11,7 @@
 
 .reviews__list {
   margin-bottom: 38px;
+  list-style-type: none;
 }
 
 .reviews__text {
@@ -37,6 +38,20 @@
 
 .reviews__arrows {
   margin-bottom: 38px;
+  display: flex;
+}
+
+.reviews__arrow {
+  background-color: #ffffff;
+  width: 130px;
+  height: 52px;
+  border: 1px solid #ececec;
+
+  &--left {
+    background-image: url("../../img/huge-arrow.svg");
+    background-repeat: no-repeat;
+    align-items: center;
+  }
 }
 
 .reviews__write {
