@@ -1,5 +1,5 @@
 .about {
-  padding: 2px 0 30px;
+  padding:30px 0;
   font-weight: bold;
   color: #000000;
 }
@@ -15,11 +15,78 @@
 }
 
 .about__advantage {
-  padding-top: 55px;
+  padding-top: 48px;
   margin-top: 35px;
 }
 
 .about__text {
   font-size: 17px;
   line-height: 20px;
+  position: relative;
+
+  &--material::before{
+    content: "";
+    display: block;
+    position: absolute;
+    background-image: url("../img/icon-1.svg");
+    top: -55px;
+    left: 7px;
+    width: 33px;
+    height: 38px;
+  }
+
+  &--price::before{
+    content: "";
+    display: block;
+    position: absolute;
+    background-image: url("../img/icon-3.svg");
+    top: -55px;
+    left: 0;
+    width: 47px;
+    height: 27px;
+  }
+
+  &--like::before{
+    content: "";
+    display: block;
+    position: absolute;
+    background-image: url("../img/icon-5.svg");
+    top: -50px;
+    left: 7px;
+    width: 34px;
+    height: 27px;
+  }
+
+  &--hand::before{
+    content: "";
+    display: block;
+    position: absolute;
+    background-image: url("../img/icon-2.svg");
+    top: -53px;
+    left: 2px;
+    width: 35px;
+    height: 34px;
+  }
+
+  &--support::before{
+    content: "";
+    display: block;
+    position: absolute;
+    background-image: url("../img/icon-4.svg");
+    top: -52px;
+    left: -6px;
+    width: 55px;
+    height: 23px;
+  }
+
+  &--present::before{
+    content: "";
+    display: block;
+    position: absolute;
+    background-image: url("../img/icon-6.svg");
+    top: -53px;
+    left: 3px;
+    width: 33px;
+    height: 32px;
+  }
 }
