@@ -12,6 +12,18 @@
     background-image: url("../img/house-m.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
+    min-height: 283px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--index {
+      background-image: url("../img/house-t-d.jpg");
+      min-height: 746px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+
   }
 }
 
@@ -20,7 +32,11 @@
   line-height: 30px;
   font-weight: bold;
   text-align: center;
-  margin: 73px 30px 120px;
+  margin: 73px 30px;
+
+  &--index {
+    margin-bottom: 120px;
+  }
 }
 
 .main__header-list {
