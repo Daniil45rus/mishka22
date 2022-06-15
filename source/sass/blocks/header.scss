@@ -4,22 +4,65 @@
   height: 80px;
   position: relative;
   align-items: center;
+
+  @media(min-width: $tablet-width) {
+    height: 90px;
+  }
 }
 
 .header__logo {
   display: block;
-  width: 86px;
-  height: 35px;
-  position: absolute;
-  right: calc(50% - 43px);
-  top: calc(50% - 17.5px);
+
+  @media(max-width: $mobile-width-only) {
+    position: absolute;
+    right: calc(50% - 43px);
+    top: calc(50% - 17.5px);
+  }
+
+  @media(min-width: $tablet-width) {
+    padding: 21px 50px;
+  }
+
+  @media(min-width: $desktop-width) {
+
+  }
 }
 
 .header__logotype {
   display: block;
 
+  width: 86px;
+  height: 35px;
+
   &--tab,
   &--desk {
     display: none;
+  }
+
+  @media(min-width: $tablet-width) {
+    width: 114px;
+    height: 46px;
+
+    &--mob{
+      display: none;
+    }
+
+    &--tab {
+      display: block;
+    }
+  }
+
+
+  @media(min-width: $desktop-width) {
+    width: 149px;
+    height: 72px;
+
+    &--tab {
+      display: none;
+    }
+
+    &--desk {
+      display: block;
+    }
   }
 }
