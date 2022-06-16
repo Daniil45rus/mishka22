@@ -29,6 +29,18 @@
 .contacts__value {
   &--mail {
     border-bottom: 1px solid $second-color;
+
+    &:active {
+      border-color: rgba($color: $second-color, $alpha: 0.1);
+    }
+  }
+
+  &:hover {
+    color: #46c1ae;
+  }
+
+  &:active {
+    color: #46c1ae;
   }
 }
 
@@ -45,4 +57,15 @@
   border: 2px solid #444444;
   padding: 16px 38px;
   background-color: #ffffff;
+
+  &:hover {
+    background-color: #444444;
+    color: #ffffff;
+  }
+
+  &:active {
+    background-color: #444444;
+    color: rgba($color: #ffffff, $alpha: 0.3);
+  }
+
 }

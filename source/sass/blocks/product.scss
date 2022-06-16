@@ -68,4 +68,15 @@
   padding: 16px 70px;
   border: 2px solid #444444;
   background-color: #ffffff;
+
+  &:hover {
+    background-color: #444444;
+    color: #ffffff;
+  }
+
+  &:active {
+    background-color: #444444;
+    color: rgba($color: #ffffff, $alpha: 0.3);
+  }
+
 }
