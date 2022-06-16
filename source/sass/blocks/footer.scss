@@ -2,10 +2,20 @@
   background-color: $main-bg-color;
   text-align: center;
   padding: 25px 0;
+
+  @media (min-width:$tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+  }
 }
 
 .footer__logo {
   display: none;
+
+  @media (min-width:$tablet-width) {
+    display: block;
+  }
 }
 
 .footer__social {
@@ -29,12 +39,24 @@
     top: 50px;
     left: -90px;
   }
+
+  @media (min-width:$tablet-width) {
+   margin: 0;
+
+   &::before {
+     display: none;
+   }
+  }
 }
 
 .footer__social-item {
   &:not(:nth-child(1)) {
     margin-left: 41px;
   }
+}
+
+.footer__social-logo {
+  fill: #231f20;
 }
 
 .footer__edit {
@@ -47,8 +69,13 @@
   color: #000000;
   align-items: center;
   margin: auto;
+
+  @media (min-width:$tablet-width) {
+    margin: 0;
+  }
 }
 
 .footer__edit-logo {
   margin-left: 27px;
+  fill: $second-color;
 }
