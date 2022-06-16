@@ -20,6 +20,11 @@
       background-image: url("../img/house-t-d.jpg");
       min-height: 746px;
     }
+
+    background-image: url("../img/zigzag.svg");
+    background-size: 100%;
+    background-repeat: repeat-x;
+    background-position: bottom;
   }
 
   @media (min-width: $desktop-width) {
@@ -36,6 +41,16 @@
 
   &--index {
     margin-bottom: 120px;
+  }
+
+  @media (min-width:$tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width:$desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
   }
 }
 

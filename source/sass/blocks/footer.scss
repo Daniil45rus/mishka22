@@ -15,7 +15,16 @@
 
   @media (min-width:$tablet-width) {
     display: block;
+    cursor: pointer;
   }
+}
+
+.footer__logo:hover .footer__logotype {
+  fill: #46c1ae;
+}
+
+.footer__logo:active .footer__logotype {
+  opacity: 0.3;
 }
 
 .footer__social {
@@ -59,6 +68,14 @@
   fill: #231f20;
 }
 
+.footer__social-link:hover .footer__social-logo {
+  fill: #46c1ae;
+}
+
+.footer__social-link:active .footer__social-logo {
+  opacity: 0.3;
+}
+
 .footer__edit {
   display: flex;
   width: 183px;
@@ -78,4 +95,12 @@
 .footer__edit-logo {
   margin-left: 27px;
   fill: $second-color;
+}
+
+.footer__edit:hover .footer__edit-logo {
+  fill: #46c1ae;
+}
+
+.footer__edit:active .footer__edit-logo {
+  opacity: 0.3;
 }
