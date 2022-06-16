@@ -53,12 +53,21 @@
 
   &:nth-child(1) {
     background-color: $second-color;
+
+    &:hover {
+      background-color: #59d5bc;
+    }
   }
 
   &:nth-child(2) {
     background-color: $third-color;
+
+    &:hover {
+      background-color: #46c1ae;
+    }
   }
 }
+
 
 .main__header-link {
   text-decoration: none;
