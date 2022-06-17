@@ -57,35 +57,33 @@
         <button class="navigation__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <ul class="navigation__list">
-          <li class="navigation__item">
-            <a class="navigation__link" href="catalog.html">
+        <ul class="site-list">
+          <li class="site-list__item">
+            <a class="site-list__link" href="catalog.html">
               Каталог товаров
             </a>
           </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="form.html">
+          <li class="site-list__item">
+            <a class="site-list__link" href="form.html">
               Вязание на заказ
             </a>
           </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">
+        </ul>
+        <ul class="user-list">
+          <li class="user-list__item">
+            <a class="user-list__link" href="#">
+              <svg class="user-list__icon user-list__icon--search" aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.6932 16.0568L14.2159 12.5795C15.2386 11.25 15.75 9.61364 15.75 7.875C15.75 3.47727 12.2727 0 7.875 0C3.47727 0 0 3.47727 0 7.875C0 12.2727 3.47727 15.75 7.875 15.75C9.61364 15.75 11.25 15.1364 12.5795 14.2159L16.0568 17.6932C16.2614 17.8977 16.4659 18 16.875 18C17.4886 18 18 17.4886 18 16.875C18 16.6705 17.8977 16.3636 17.6932 16.0568ZM2.25 7.875C2.25 4.80682 4.80682 2.25 7.875 2.25C10.9432 2.25 13.5 4.80682 13.5 7.875C13.5 10.9432 10.9432 13.5 7.875 13.5C4.80682 13.5 2.25 10.9432 2.25 7.875Z"/>
+              </svg>
               Поиск по сайту
             </a>
           </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">
+          <li class="user-list__item">
+            <a class="user-list__link" href="#">
+              <svg class="user-list__icon user-list__icon--cart" aria-hidden="true" focusable="false" width="21" height="18" viewBox="0 0 21 18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.1884 6.85716H16.6377L13.1884 0.380944C12.9855 -8.61287e-06 12.5797 -0.0952351 12.1739 0.0952412C11.7681 0.285717 11.6667 0.66667 11.8696 1.04762L15.0145 6.85716H5.7826L8.92753 1.04762C9.13043 0.66667 8.92754 0.285717 8.6232 0.0952412C8.2174 -0.0952351 7.8116 0.0952295 7.6087 0.380944L4.1594 6.85716H0.811583C0.405785 6.85716 0 7.14286 0 7.61905C0 8 0.304336 8.38094 0.811583 8.38094H1.01449L1.92753 11.2381C1.72463 11.3333 1.62317 11.5238 1.62317 11.8095C1.62317 12.1905 1.92753 12.4762 2.33332 12.4762L4.05797 18H16.942L18.6667 12.4762C19.0725 12.4762 19.3768 12.1905 19.3768 11.8095C19.3768 11.619 19.2754 11.3333 19.0725 11.2381L19.9855 8.38094H20.1884C20.5942 8.38094 21 8.09524 21 7.61905C21 7.14286 20.5942 6.85716 20.1884 6.85716ZM15.6232 16.4762H5.07247L3.85506 12.381H16.942L15.6232 16.4762ZM17.2464 10.9524H3.34782L2.53623 8.28573H18.058L17.2464 10.9524Z"/>
+              </svg>
               Корзина: пока пуста
-            </a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">
-              Новые поступления
-            </a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">
-              Распродажа
             </a>
           </li>
         </ul>
@@ -122,6 +120,7 @@
             <h4 class="product__subtitle">Вязаные корзинки </h4>
             <h3 class="product__title">товар недели</h3>
           </div>
+         <div class="product__content">
           <p class="product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх размерах.</p>
           <dl class="product__characteristics">
             <div class="product__characteristic">
@@ -137,11 +136,16 @@
               <dd class="product__value">15 см</dd>
             </div>
           </dl>
-          <img class="product__img" src="img/triple-set-m.jpg" width="260" height="315">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/triple-set-d.jpg">
+            <source media="(min-width: 768px)" srcset="img/triple-set-t.jpg">
+            <img class="product__img" src="img/triple-set-m.jpg" width="260" height="315" alt="Корзинки">
+          </picture>
           <div class="product__order">
             <p class="product__price">Цена: 990 руб.</p>
             <button class="product__button" type="button">заказать</button>
           </div>
+         </div>
         </div>
       </section>
       <section class="about">
@@ -173,7 +177,10 @@
       </section>
       <section class="reviews">
         <div class="wrapper">
-          <h3 class="reviews__title">Отзывы</h3>
+          <div class="reviews__wrapper">
+            <h3 class="reviews__title">Отзывы</h3>
+            <button class="reviews__write reviews__write--t-d " type="button">написать</button>
+          </div>
           <ul class="reviews__list">
             <li class="reviews__item">
               <blockquote class="reviews__content">
@@ -183,29 +190,31 @@
                   В отчаянии, я накупила аксессуаров и игрушек в Мишке,
                   и мои фотографии сразу стали более стильными, а также набирают больше лайков!
                 </p>
-                <div class="reviews__info">
-                  <cite class="reviews__name">
-                    Анастасия Красильникова
-                  </cite>
-                  <p class="reviews__contact">@misssssiskras</p>
+                <div class="reviews__container">
+                  <div class="reviews__info">
+                    <cite class="reviews__name">
+                      Анастасия Красильникова
+                    </cite>
+                    <p class="reviews__contact">@misssssiskras</p>
+                  </div>
+                  <div class="reviews__arrows">
+                    <button class="reviews__arrow reviews__arrow--left" type="button">
+                      <span class="visually-hidden">Предыдущий отзыв</span>
+                      <svg aria-hidden="true" focusable="false" width="50" height="26" viewBox="0 0 50 26" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M50 11H7.7L15.8 2.8L13 0L0 13L13 26L15.8 23.2L7.7 15H50V11Z"/>
+                      </svg>
+                    </button>
+                    <button class="reviews__arrow reviews__arrow--right" type="button">
+                      <span class="visually-hidden">Следущий отзыв</span>
+                      <svg aria-hidden="true" focusable="false" width="50" height="26" viewBox="0 0 50 26" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 11H42.3L34.2 2.8L37 0L50 13L37 26L34.2 23.2L42.3 15H0V11Z"/>
+                      </svg>
+                    </button>
+                  </div>
                 </div>
               </blockquote>
             </li>
           </ul>
-          <div class="reviews__arrows">
-            <button class="reviews__arrow reviews__arrow--left" type="button">
-              <span class="visually-hidden">Предыдущий отзыв</span>
-              <svg aria-hidden="true" focusable="false" width="50" height="26" viewBox="0 0 50 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M50 11H7.7L15.8 2.8L13 0L0 13L13 26L15.8 23.2L7.7 15H50V11Z" fill="black"/>
-              </svg>
-            </button>
-            <button class="reviews__arrow reviews__arrow--right" type="button">
-              <span class="visually-hidden">Следущий отзыв</span>
-              <svg aria-hidden="true" focusable="false" width="50" height="26" viewBox="0 0 50 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 11H42.3L34.2 2.8L37 0L50 13L37 26L34.2 23.2L42.3 15H0V11Z" fill="black"/>
-              </svg>
-            </button>
-          </div>
           <button class="reviews__write" type="button">написать</button>
         </div>
       </section>
@@ -219,12 +228,12 @@
             </div>
             <div class="contacts__contact">
               <dt class="contacts__property">адрес:</dt>
-              <dd class="contacts__value">г. Санкт-Петербург ул. Большая Конюшенная д.&nbsp;19/8, офис 101</dd>
+              <dd class="contacts__value">г. Санкт-Петербург ул.&nbsp;Большая Конюшенная д.&nbsp;19/8, офис 101</dd>
             </div>
           </dl>
         </div>
         <div class="contacts__map">
-
+          <iframe class="contacts__map-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d983.0346383489228!2d31.26585797932124!3d58.52856861516325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46beea4a619a4ad3%3A0xd7691fd8a0a7ea96!2z0YPQuy4g0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8sIDE5LCDQktC10LvQuNC60LjQuSDQndC-0LLQs9C-0YDQvtC0LCDQndC-0LLQs9C-0YDQvtC00YHQutCw0Y8g0L7QsdC7LiwgMTczMDAx!5e0!3m2!1sru!2sru!4v1644150256216!5m2!1sru!2sru" width="600" height="450" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
         <button class="contacts__write">напишите нам</button>
       </section>
@@ -274,29 +283,5 @@
         </svg>
       </a>
     </footer>
-    <div class="modal">
-      <div class="modal__content">
-        <h1 class="modal__title">добавить в корзину</h1>
-        <fieldset class="modal__set">
-          <legend class="modal__legend">Выберете размер:</legend>
-          <label class="modal__label">
-            <input class="modal__radio" type="radio" name="S">
-            <span class="modal__radio-mark"></span>
-            <span class="modal__radio-text">S</span>
-          </label>
-          <label class="modal__label">
-            <input class="modal__radio" type="radio" name="M">
-            <span class="modal__radio-mark"></span>
-            <span class="modal__radio-text">M</span>
-          </label>
-          <label class="modal__label">
-            <input class="modal__radio" type="radio" name="L">
-            <span class="modal__radio-mark"></span>
-            <span class="modal__radio-text">L</span>
-          </label>
-        </fieldset>
-        <button class="modal__button" type="button">добавить</button>
-      </div>
-    </div>
   </body>
 </html>

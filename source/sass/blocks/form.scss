@@ -228,6 +228,13 @@
   border-radius: 50%;
   top: 11px;
   left: 11px;
+
+  @media (min-width:$tablet-width) {
+    width: 23px;
+    height: 23px;
+    top: 12px;
+    left: 13px;
+  }
 }
 
 .form__checkbox-mark {

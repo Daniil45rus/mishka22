@@ -1,10 +1,29 @@
 .product {
-  padding: 30px 0 35px;
+  padding: 30px 0 41px;
+  background-image: url("../img/zigzag2.svg");
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: 100%;
+
+  @media (min-width: $tablet-width) {
+    padding:40px 0 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 115px 0 75px 175px;
+  }
 }
 
 .product__titles {
   @media (min-width: $tablet-width) {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
   }
 }
 
@@ -15,6 +34,17 @@
   color: $second-color;
   text-transform: uppercase;
   margin-bottom: 18px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    width: 100px;
+    line-height: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    left: -125px;
+  }
 }
 
 .product__subtitle {
@@ -23,16 +53,52 @@
   font-weight: bold;
   margin-bottom: 5px;
   color: #000000;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+    z-index: 1;
+  }
+}
+
+.product__content {
+  display: flex;
+  flex-direction: column;
+  width: 292px;
+  position: relative;
 }
 
 .product__description {
   font-size: 15px;
   line-height: 24px;
   margin-bottom: 28px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+    margin-bottom: 48px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 60px;
+  }
 }
 
 .product__characteristics {
   margin-bottom: 28px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 58px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 110px;
+  }
 }
 
 .product__characteristic {
@@ -46,10 +112,31 @@
 
 .product__img {
   margin-bottom: 25px;
+  width: 260px;
+  height: 315px;
+
+  @media (min-width: $tablet-width) {
+    width: 335px;
+    height: 405px;
+    position: absolute;
+    right: -376px;
+    top: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 525px;
+    height: 636px;
+    right: -580px;
+    top: -160px;
+  }
 }
 
 .product__order {
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+
+  }
 }
 
 .product__price {
@@ -57,6 +144,11 @@
   line-height: 24px;
   font-weight: bold;
   margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    margin-bottom: 33px;
+  }
 }
 
 .product__button {
@@ -79,4 +171,7 @@
     color: rgba($color: #ffffff, $alpha: 0.3);
   }
 
+  @media (min-width: $tablet-width) {
+    padding: 16px 96px;
+  }
 }
